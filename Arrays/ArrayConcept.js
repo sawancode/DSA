@@ -73,3 +73,48 @@ function findMinimum(arr){
 
 let mini = [4, 6, 8, 0, 3, 7];
 findMinimum(mini);
+
+// Sum of all array element
+
+function sumOfElement(values){
+    let sum = 0;
+    for (let i = 0; i < values.length; i++) {
+        sum+=values[i];
+    }
+    // console.log(`The sum of values are = ${sum}`);
+}
+
+let arr = [10, 20, 30, 40, 50]
+sumOfElement(arr)
+
+// Linear Search
+
+function linearSearch(arr){
+    let key = 12;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === key){
+            // console.log(`The key is present = ${key}`);
+            return; // exit after finding the key
+        }
+    }
+    // console.log(`The key is not present = ${key}`);
+}
+
+let linearElm = [4, 5, -6, 7, 9, 10];
+linearSearch(linearElm);
+
+// Reverse array without loop
+
+function reverseArray(arr){
+    let start = 0;
+    let end = arr.length-1;
+    while(start<end){
+        [arr[start], arr[end]] = [arr[end], arr[start]];
+        start++;
+        end--;
+    }
+}
+
+let element = [2, 5, 7, 9];
+reverseArray(element)
+// console.log(element);
